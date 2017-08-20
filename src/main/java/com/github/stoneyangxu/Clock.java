@@ -1,17 +1,17 @@
 package com.github.stoneyangxu;
 
 public abstract class Clock {
-    protected static int UTC_OFFSET = 0;
+    protected int utcOffset = 0;
     protected int localTime;
 
     public Clock(int utcOffSet) {
-        UTC_OFFSET = utcOffSet;
+        this.utcOffset = utcOffSet;
     }
 
     public abstract void setLocalTime(int localTime);
 
-    public static int toLocalTime(int utcZeroTime) {
-        return utcZeroTime + UTC_OFFSET;
+    public void setLocalTimeFromUtcZeroTime(int utcZeroTime) {
+        this.localTime = utcZeroTime + this.utcOffset;
     }
 
     public String getTime() {
