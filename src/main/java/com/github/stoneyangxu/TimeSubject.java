@@ -15,4 +15,10 @@ public abstract class TimeSubject {
     }
 
     public abstract void notifyAllClocks();
+
+    public void printTimeOfAllClocks() {
+        for (String cityName : clocks.keySet()) {
+            System.out.println(cityName + ": " + clocks.get(cityName).getTime());
+        }
+    }
 }
