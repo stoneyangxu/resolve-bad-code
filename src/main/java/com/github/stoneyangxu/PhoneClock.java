@@ -1,20 +1,15 @@
 package com.github.stoneyangxu;
 
-public class PhoneClock extends Clock {
+public class PhoneClock {
 
-    private UtcTime utcTime;
+    private final int utcOffSet;
+    private int time;
 
     public PhoneClock(int utcOffSet) {
-        super(utcOffSet);
+        this.utcOffSet = utcOffSet;
     }
 
-    @Override
-    public void setLocalTime(int localTime) {
-        super.localTime = localTime;
-        this.utcTime.setUtcZeroTime(localTime - utcOffset);
-    }
-
-    public void setUtcTime(UtcTime utcTime) {
-        this.utcTime = utcTime;
+    public void setTime(int time) {
+        this.time = time;
     }
 }

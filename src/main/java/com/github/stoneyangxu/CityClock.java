@@ -1,12 +1,14 @@
 package com.github.stoneyangxu;
 
-public class CityClock extends Clock {
+public class CityClock {
+    private final int utcOffSet;
+    private int time;
+
     public CityClock(int utcOffSet) {
-        super(utcOffSet);
+        this.utcOffSet = utcOffSet;
     }
 
-    @Override
-    public void setLocalTime(int localTime) {
-        super.localTime = localTime;
+    public int getTime() {
+        return time;
     }
 }
