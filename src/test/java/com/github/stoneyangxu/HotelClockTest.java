@@ -51,4 +51,13 @@ public class HotelClockTest {
         assertEquals(1, londonClock.getTime());
         assertEquals(20, newYorkClock.getTime());
     }
+
+    @Test
+    public void phoneClockShouldHaveRightTime() throws Exception {
+        PhoneClock phoneClock = new PhoneClock(8);
+        phoneClock.setTime(9);
+
+        assertEquals(9, phoneClock.getTime());
+
+    }
 }
