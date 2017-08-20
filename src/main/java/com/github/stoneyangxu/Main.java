@@ -8,7 +8,7 @@ public class Main {
         utcTime.attach("London", new CityClock(0));
         utcTime.attach("Moscow", new CityClock(4));
         utcTime.attach("Sydney", new CityClock(10));
-        utcTime.attach("NewYork", new CityClock(-1));
+        utcTime.attach("NewYork", new CityClock(-5));
 
         PhoneClock phoneClock = new PhoneClock(8);
         phoneClock.setUtcTime(utcTime);

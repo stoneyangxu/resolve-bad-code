@@ -11,10 +11,14 @@ public abstract class Clock {
     public abstract void setLocalTime(int localTime);
 
     public void setLocalTimeFromUtcZeroTime(int utcZeroTime) {
-        this.localTime = utcZeroTime + this.utcOffset;
+        this.localTime = Clock.makeHourWithIn0To23(utcZeroTime + this.utcOffset);
     }
 
     public String getTime() {
         return String.valueOf(this.localTime);
+    }
+
+    private static int makeHourWithIn0To23(int hour) {
+        return (hour + 24) % 24;
     }
 }
