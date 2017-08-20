@@ -11,7 +11,8 @@ public class HotelClockTest {
        CityClock londonClock = new CityClock(0);
 
        PhoneClock phoneClock = new PhoneClock(8);
-       phoneClock.setTime(9);
+       phoneClock.setCityClock(londonClock);
+       phoneClock.setTime(9); // TODO set clock to multiple city clocks§
 
        assertEquals(1, londonClock.getTime());
     }
