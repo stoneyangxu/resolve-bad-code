@@ -1,11 +1,10 @@
 package com.github.stoneyangxu;
 
-public class CityClock {
-    private final int utcOffSet;
+public class CityClock extends Clock {
     private int utcZeroTime;
 
     public CityClock(int utcOffSet) {
-        this.utcOffSet = utcOffSet;
+        super(utcOffSet);
     }
 
     public int getTime() {
