@@ -9,7 +9,7 @@ public class CityClock {
     }
 
     public int getTime() {
-        return this.utcZeroTime + this.utcOffSet;
+        return (this.utcZeroTime + this.utcOffSet + 24) % 24;
     }
 
     public void setUtcZeroTime(int utcZeroTime) {
