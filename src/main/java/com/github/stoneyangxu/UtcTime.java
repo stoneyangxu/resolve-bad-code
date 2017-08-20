@@ -1,6 +1,14 @@
 package com.github.stoneyangxu;
 
 public class UtcTime extends TimeSubject {
+    public int getUtcZeroTime() {
+        return utcZeroTime;
+    }
+
+    public void setUtcZeroTime(int utcZeroTime) {
+        this.utcZeroTime = utcZeroTime;
+    }
+
     private int utcZeroTime;
 
     @Override
